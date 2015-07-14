@@ -1,0 +1,31 @@
+{
+  "name": "store-link",
+  "version": "0.0.0",
+  "description": "Construct store link for Apple iTunes, Google Play and Windows stores.",
+  "license": "MIT",
+  "repository": "xipasduarte/store-link",
+  "author": {
+    "name": "Pedro Duarte",
+    "email": "xipasduarte@gmail.com",
+    "url": "github.com/xipasduarte"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "in-array": "^0.1.0",
+    "trim": "0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
