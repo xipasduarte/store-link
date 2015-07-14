@@ -15,32 +15,45 @@ $ npm install --save store-link
 ```js
 var storeLink = require('store-link');
 
-storeLink('unicorns');
-//=> unicorns & rainbows
+storeLink('android', 'org.mozilla.firefox');
+//=> https://play.google.com/store/apps/details?id=org.mozilla.firefox
 ```
 
 
 ## API
 
-### storeLink(input, [options])
+### storeLink(store, id)
 
-#### input
+#### store
 
 *Required*  
 Type: `string`
 
-Lorem ipsum.
+The respective store identifier:
 
-#### options
+* Apple iTunes Store: `ios`
+* Google Play Store: `android`
+* Windows Store: `windows`
 
-##### foo
+#### id
 
-Type: `boolean`  
-Default: `false`
+*Required*
+Type: `string`
 
-Lorem ipsum.
+The string that identifies the application on each store.
 
+**Apple iTunes**
+
+`https://itunes.apple.com/us/app/id[the_id]`
+
+**Google Play**
+
+`https://play.google.com/store/apps/details?id=[the_id]`
+
+**Windows**
+
+`http://www.windowsphone.com/s?appid=[the_id]`
 
 ## License
 
-MIT © [Pedro Duarte](https://xipasduarte.github.com)
+MIT © [Pedro Duarte](https://github.com/xipasduarte)

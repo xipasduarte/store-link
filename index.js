@@ -28,5 +28,5 @@ module.exports = function (store, id) {
 		'windows': 'http://www.windowsphone.com/s?appid='
 	}
 
-	return baseLinks(store) + id;
+	return baseLinks[store] + id;
 };
