@@ -1,7 +1,5 @@
 # store-link [![Build Status](https://travis-ci.org/xipasduarte/store-link.svg?branch=master)](https://travis-ci.org/xipasduarte/store-link)
 
-> My grand module
-
 
 ## Install
 
