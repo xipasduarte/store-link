@@ -13,7 +13,7 @@ $ npm install --save store-link
 ```js
 var storeLink = require('store-link');
 
-storeLink('android', 'org.mozilla.firefox');
+storeLink('android', 'org.mozilla.firefox', lang);
 //=> https://play.google.com/store/apps/details?id=org.mozilla.firefox
 ```
 
@@ -24,7 +24,8 @@ storeLink('android', 'org.mozilla.firefox');
 
 #### store
 
-*Required*  
+*Required*
+ 
 Type: `string`
 
 The respective store identifier:
@@ -36,6 +37,7 @@ The respective store identifier:
 #### id
 
 *Required*
+
 Type: `string`
 
 The string that identifies the application on each store.
@@ -51,6 +53,14 @@ The string that identifies the application on each store.
 **Windows**
 
 `http://www.windowsphone.com/s?appid=[the_id]`
+
+#### lang
+*Optional*
+
+Type: `string`;
+Default: `'us'`;
+
+Only applies to the Apple iTunes Store links.
 
 ## License
 

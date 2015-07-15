@@ -1,8 +1,12 @@
 'use strict';
+var empty = require('is-empty');
 var inArray = require('in-array');
 var trim = require('trim');
 
-module.exports = function (store, id) {
+module.exports = function (store, id, lang) {
+	// Default value for the language argument.
+	lang = typeof lang === 'string' ? a : 'us';
+
 	// Check if either input variable is of type string.
 	if (typeof store !== 'string') {
 		throw new TypeError('Expected a string for store.');
@@ -23,10 +27,19 @@ module.exports = function (store, id) {
 	}
 
 	var baseLinks = {
-		'ios': 'https://itunes.apple.com/us/app/id',
+		'ios': {
+			'pre-locale': 'https://itunes.apple.com/',
+			'pre-id': '/app/id'
+		},
 		'android': 'http://play.google.com/store/apps/details?id=',
 		'windows': 'http://www.windowsphone.com/s?appid='
 	}
 
-	return baseLinks[store] + id;
+	if(store === 'ios') {
+		var link = baseLinks['ios']['pre-locale'] + lang + baseLinks['ios']['pre-id'];
+	} else {
+		var link = baseLinks[store];
+	}
+
+	return link + id;
 };

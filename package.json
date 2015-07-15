@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "in-array": "^0.1.0",
+    "is-empty": "0.0.1",
     "trim": "0.0.1"
   },
   "devDependencies": {
