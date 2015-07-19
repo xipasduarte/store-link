@@ -20,12 +20,12 @@ storeLink('android', 'org.mozilla.firefox', lang);
 
 ## API
 
-### storeLink(store, id)
+### storeLink(store, id, lang)
 
 #### store
 
 *Required*
- 
+
 Type: `string`
 
 The respective store identifier:

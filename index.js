@@ -18,6 +18,7 @@ module.exports = function (store, id, lang) {
 	// Remove leading/trailing white space.
 	store = trim(store);
 	id = trim(id);
+	lang = trim(lang);
 
 	var stores = ['ios', 'android', 'windows'];
 
