@@ -1,6 +1,6 @@
 {
   "name": "store-link",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Construct store link for Apple iTunes, Google Play and Windows stores.",
   "license": "MIT",
   "repository": "xipasduarte/store-link",
