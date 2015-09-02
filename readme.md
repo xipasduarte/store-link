@@ -1,6 +1,11 @@
 # store-link [![Build Status](https://travis-ci.org/xipasduarte/store-link.svg?branch=master)](https://travis-ci.org/xipasduarte/store-link)
 
-Note: If you are looking for more control on Apple iTunes Store links checkout: [apple-store-link](https://www.npmjs.com/package/apple-store-link)
+**Note**
+
+If you are looking for more control on Apple iTunes Store links or just need one of the stores checkout:
+* [apple-store-link](https://www.npmjs.com/package/apple-store-link)
+* [google-store-link](https://www.npmjs.com/package/google-store-link)
+* windows-store-link (comming soon)
 
 ## Install
 
