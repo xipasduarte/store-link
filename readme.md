@@ -1,5 +1,6 @@
 # store-link [![Build Status](https://travis-ci.org/xipasduarte/store-link.svg?branch=master)](https://travis-ci.org/xipasduarte/store-link)
 
+Note: If you are looking for more control on Apple iTunes Store links checkout: [apple-store-link](https://www.npmjs.com/package/apple-store-link)
 
 ## Install
 
@@ -13,8 +14,12 @@ $ npm install --save store-link
 ```js
 var storeLink = require('store-link');
 
-storeLink('android', 'org.mozilla.firefox', lang);
-//=> https://play.google.com/store/apps/details?id=org.mozilla.firefox
+storeLink(store, id, lang);
+
+// Examples
+
+storeLink('android', 'org.mozilla.firefox', 'pt-PT');
+//=> https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=pt-PT
 ```
 
 
@@ -58,9 +63,11 @@ The string that identifies the application on each store.
 *Optional*
 
 Type: `string`;
-Default: `'us'`;
+Defaults:
+* Apple iTunes: `'us'`;
+* Google Play Store: `''` (results in the international english store);
 
-Only applies to the Apple iTunes Store links.
+Not supported in Windows "yet" (haven't really checked if it is an option).
 
 ## License
 
