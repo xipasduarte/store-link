@@ -5,7 +5,7 @@
 If you are looking for more control on Apple iTunes Store links or just need one of the stores checkout:
 * [apple-store-link](https://www.npmjs.com/package/apple-store-link)
 * [google-store-link](https://www.npmjs.com/package/google-store-link)
-* windows-store-link (comming soon)
+* [windows-store-link](https://www.npmjs.com/package/windows-store-link)
 
 ## Install
 
@@ -21,10 +21,18 @@ var storeLink = require('store-link');
 
 storeLink(store, id, lang);
 
-// Examples
+/**
+ * Examples
+ */
 
-storeLink('android', 'org.mozilla.firefox', 'pt-PT');
-//=> https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=pt-PT
+storeLink('ios', '376183339', 'us');
+//=> https://itunes.apple.com/us/app/id376183339
+
+storeLink('android', 'com.duolingo', 'pt-PT');
+//=> https://play.google.com/store/apps/details?id=com.duolingo&hl=pt-PT
+
+storeLink('windows', 'duolingo-learn-languages-for-free/9wzdncrcv5xn', 'pt-pt');
+//=> https://www.microsoft.com/pt-pt/store/apps/duolingo-learn-languages-for-free/9wzdncrcv5xn
 ```
 
 
@@ -54,15 +62,15 @@ The string that identifies the application on each store.
 
 **Apple iTunes**
 
-`https://itunes.apple.com/us/app/id[the_id]`
+`https://itunes.apple.com/[lang]/app/id[the_id]`
 
 **Google Play**
 
-`https://play.google.com/store/apps/details?id=[the_id]`
+`https://play.google.com/store/apps/details?id=[the_id]&hl=[lang]`
 
 **Windows**
 
-`http://www.windowsphone.com/s?appid=[the_id]`
+`http://www.microsoft.com/[lang]/store/apps/[the_id]`
 
 #### lang
 *Optional*
@@ -71,8 +79,7 @@ Type: `string`;
 Defaults:
 * Apple iTunes: `'us'`;
 * Google Play Store: `''` (results in the international english store);
-
-Not supported in Windows "yet" (haven't really checked if it is an option).
+* Windows Store: `''` (results in the store of your language preferences);
 
 ## License
 
