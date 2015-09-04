@@ -25,7 +25,8 @@
     "apple-store-link": "^0.0.2",
     "google-store-link": "0.0.1",
     "in-array": "^0.1.0",
-    "trim": "0.0.1"
+    "trim": "0.0.1",
+    "windows-store-link": "0.0.2"
   },
   "devDependencies": {
     "mocha": "*"
